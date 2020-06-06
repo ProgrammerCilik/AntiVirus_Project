@@ -83,7 +83,7 @@ RMDIR /s /q RECYCLER
 RMDIR /s /q "System volume information"
 RMDIR /s /q autorun.inf
 cls
-goto selesai
+goto thx
 
 :d
 color f
@@ -104,7 +104,7 @@ RMDIR /s /q RECYCLER
 RMDIR /s /q "System volume information"
 RMDIR /s /q autorun.inf
 cls
-goto selesai
+goto thx
 
 :e
 color f
@@ -125,7 +125,7 @@ RMDIR /s /q RECYCLER
 RMDIR /s /q "System volume information"
 RMDIR /s /q autorun.inf
 cls
-goto selesai
+goto thx
 
 :f
 color f
@@ -146,39 +146,17 @@ RMDIR /s /q RECYCLER
 RMDIR /s /q "System volume information"
 RMDIR /s /q autorun.inf
 cls
-goto selesai
-
-:selesai
-echo =========================
-echo = Proses telah selesai! =
-echo =========================
-echo Kembali? (y/n)
-set /p yn3=
-cls 
-if %yn3% == y goto menu
-if %yn3% == n goto thx
+goto thx
 
 :thx 
 color d
+echo =========================
+echo = Proses Telah selesai! =
 echo =====================================================
 echo = Terima Kasih telah menggunakan AntiVirus_Project! =
 echo =====================================================
-echo Keluar? (y/n)
-set /p yn4=
-cls
-if %yn4% == y goto 
-if %yn4% == n goto thx2
-
-:thx2
-color f
-echo =============================================
-echo = Ingin menggunakan AntiVirus_Project lagi? =
-echo =============================================
-echo a) Yess							   b) Noo
-set /p qwerty=
-cls
-if %qwerty% == a goto menu
-if %qwerty% == b goto thx
+ping localhost -n 5 >nul
+exit
 
 :sosmed
 color b
